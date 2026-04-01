@@ -1,0 +1,13 @@
+# Gerados automaticamente
+lazy-lock.json
+fish_variables
+*.backup
+*.bak
+
+# Secrets
+*.secret
+.env
+opencode.json
+
+# Yazi backups
+*-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]

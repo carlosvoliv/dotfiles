@@ -1,0 +1,189 @@
+/* --- RESET --- */
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+/* FONTE DELICADA */
+#custom-arch,
+#workspaces,
+#window,
+#clock,
+#custom-clock,
+#network,
+#pulseaudio,
+#battery,
+#custom-search,
+#custom-notification,
+#tray {
+  font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+window#waybar {
+  background: rgba(30, 30, 46, 0.75);
+  color: #cdd6f4;
+}
+
+/* --- MÓDULO ARCH (Cores Invertidas) --- */
+#custom-arch {
+  font-size: 16px;
+  color: #74c7ec;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: transparent;
+  transition: color 0.3s ease;
+}
+
+#custom-arch:hover {
+  color: #ffffff;
+}
+
+/* --- TÍTULO --- */
+#window {
+  color: #a6adc8;
+}
+
+/* --- WORKSPACES --- */
+#workspaces {
+  background: transparent;
+}
+
+#workspaces button {
+  padding: 0 4px;
+  color: #585b70;
+  font-size: 10px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+  color: #74c7ec;
+  font-size: 14px;
+}
+
+#workspaces button:hover {
+  color: #ffffff;
+}
+
+#workspaces button.urgent {
+  color: #f38ba8;
+  font-weight: bold;
+  animation: blink-urgent 1.5s infinite ease-in-out;
+}
+
+@keyframes blink-urgent {
+  0% {
+    color: #f38ba8;
+    text-shadow: 0 0 5px rgba(243, 139, 168, 0.5);
+  }
+
+  50% {
+    color: #fab387;
+    text-shadow: none;
+  }
+
+  100% {
+    color: #f38ba8;
+    text-shadow: 0 0 5px rgba(243, 139, 168, 0.5);
+  }
+}
+
+/* --- CONTROLES (Network, Audio, Bateria) --- */
+#network,
+#pulseaudio,
+#battery {
+  background: transparent;
+  color: #cdd6f4;
+  padding: 0 10px;
+  font-size: 13px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+#network:hover,
+#pulseaudio:hover,
+#battery:hover {
+  color: #74c7ec;
+}
+
+/* Cores da bateria */
+#battery.charging,
+#battery.plugged {
+  color: #a6e3a1;
+}
+
+#battery.critical:not(.charging) {
+  color: #f38ba8;
+}
+
+/* --- OUTROS --- */
+#tray {
+  padding: 0 10px;
+  background: transparent;
+}
+
+#custom-search {
+  color: #cdd6f4;
+  padding: 0 10px;
+  font-size: 14px;
+  background: transparent;
+}
+
+#clock,
+#custom-clock {
+  color: #cdd6f4;
+  padding: 0 10px;
+  background: transparent;
+}
+
+/* Estado Padrão (Sem notificações) - Branco/Cinza Claro */
+#custom-notification {
+  color: #cdd6f4;
+  padding-right: 20px;
+  padding-left: 15px;
+  font-size: 14px;
+  background: transparent;
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+}
+
+/* Estado COM Notificações - Amarelo */
+#custom-notification.notification {
+  color: #f9e2af;
+}
+
+/* Estado "Não Perturbe" (DnD) - Cinza Escuro (Opcional) */
+#custom-notification.dnd-none {
+  color: #585b70;
+}
+
+/* Estado "Não Perturbe" mas com Notificações escondidas - Amarelo mais escuro */
+#custom-notification.dnd-notification {
+  color: #fab387;
+}
+
+/* --- SUBMAP (Modo Resize) --- */
+#submap {
+  background-color: transparent;
+  color: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Quando o modo Resize ativa */
+#submap.resize {
+  color: #f38ba8;
+  /* Catppuccin Red */
+  background-color: transparent;
+  padding: 0 10px;
+  /* Espacinho para não colar no último workspace */
+  text-shadow: 0 0 10px rgba(243, 139, 168, 0.8);
+  /* Efeito Neon/Glow */
+}

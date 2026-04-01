@@ -1,0 +1,112 @@
+# --- LISTA DE FICHEIROS (Manager) ---
+[mgr]
+# Caminho da pasta no topo (Azul Sapphire)
+cwd = { fg = "#74c7ec", bold = true }
+
+# Barra de Seleção (Fundo Azul Sapphire, Texto Escuro)
+hovered         = { bg = "#74c7ec", fg = "#1e1e2e", bold = true }
+preview_hovered = { underline = true }
+
+# Marcadores
+marker_copied   = { fg = "#a6e3a1", bg = "reset" }
+marker_cut      = { fg = "#f38ba8", bg = "reset" }
+marker_marked   = { fg = "#74c7ec", bg = "reset" }
+marker_selected = { fg = "#74c7ec", bg = "reset" }
+
+# Abas
+tab_active   = { fg = "#1e1e2e", bg = "#74c7ec", bold = true }
+tab_inactive = { fg = "#cdd6f4", bg = "#313244" }
+tab_width    = 1
+
+# Bordas
+border_symbol = "│"
+border_style  = { fg = "#585b70" }
+
+# --- BARRA DE STATUS LIMPA E TRANSPARENTE ---
+[status]
+separator_open  = ""
+separator_close = ""
+
+# O que aparece na esquerda
+left = [
+  "mode",       # NORMAL / SELECT
+  "permissions" # rwx
+]
+
+# O que aparece no centro
+center = [
+  "cwd"  # diretório atual
+]
+
+# O que aparece na direita
+right = [
+  "position",   # 1/20
+  "percentage", # 14%
+  "progress"    # barras de loading
+]
+
+# --------- CORES -----------
+mode_normal = { fg = "#74c7ec", bg = "reset", bold = true }
+mode_select = { fg = "#cba6f7", bg = "reset", bold = true }
+mode_unset  = { fg = "#f2cdcd", bg = "reset", bold = true }
+
+permissions_t = { fg = "#74c7ec", bg = "reset" }
+permissions_r = { fg = "#f9e2af", bg = "reset" }
+permissions_w = { fg = "#f38ba8", bg = "reset" }
+permissions_x = { fg = "#a6e3a1", bg = "reset" }
+permissions_s = { fg = "#7f849c", bg = "reset" }
+
+progress_label  = { fg = "#ffffff", bg = "reset", bold = true }
+progress_normal = { fg = "#74c7ec", bg = "reset" }
+progress_error  = { fg = "#f38ba8", bg = "reset" }
+
+position = { fg = "#74c7ec", bg = "reset" }
+percentage = { fg = "#74c7ec", bg = "reset" }
+cwd = { fg = "#cdd6f4", bg = "reset", bold = true }
+
+# --- INPUTS E SELEÇÃO ---
+[input]
+border   = { fg = "#74c7ec" }
+title    = {}
+value    = {}
+selected = { bg = "#74c7ec", fg = "#1e1e2e" }
+
+[select]
+border   = { fg = "#74c7ec" }
+active   = { fg = "#f5c2e7" }
+inactive = {}
+
+[completion]
+border  = { fg = "#74c7ec" }
+active  = { bg = "#74c7ec", fg = "#1e1e2e" }
+inactive = {}
+icon    = { fg = "#9399b2" }
+
+[tasks]
+border  = { fg = "#74c7ec" }
+title   = {}
+hovered = { bg = "#74c7ec", fg = "#1e1e2e" }
+
+[which]
+mask            = { bg = "#313244" }
+cand            = { fg = "#94e2d5" }
+rest            = { fg = "#9399b2" }
+desc            = { fg = "#f5c2e7" }
+separator       = "  "
+separator_style = { fg = "#585b70" }
+
+# --- ÍCONES E CORES DE FICHEIROS ---
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "#f2cdcd" },
+	{ mime = "video/*", fg = "#f9e2af" },
+	{ mime = "audio/*", fg = "#f9e2af" },
+	{ mime = "application/zip", fg = "#f5c2e7" },
+	{ mime = "application/gzip", fg = "#f5c2e7" },
+	{ mime = "application/x-tar", fg = "#f5c2e7" },
+	{ mime = "application/x-bzip", fg = "#f5c2e7" },
+	{ mime = "application/x-bzip2", fg = "#f5c2e7" },
+	{ mime = "application/x-7z-compressed", fg = "#f5c2e7" },
+	{ mime = "application/x-rar", fg = "#f5c2e7" },
+	{ name = "*", fg = "#cdd6f4" }
+]

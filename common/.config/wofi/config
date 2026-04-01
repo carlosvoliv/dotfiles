@@ -1,0 +1,14 @@
+mode=drun
+show=drun
+width=500
+height=350
+location=center
+allow_images=true
+image_size=24
+prompt=Search...
+no_actions=true
+filter_rate=100
+allow_markup=true
+# Adiciona classe para podermos estilizar diferente se precisar
+key_down=Down
+key_up=Up

@@ -1,0 +1,123 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+# Aumenta o limite para 2 segundos (2000ms)
+command_timeout = 2000
+
+format = """
+[](fg:surface0)\
+$os\
+$username\
+[](fg:surface0 bg:surface1)\
+$directory\
+[](fg:surface1 bg:surface2)\
+$git_branch\
+$git_status\
+[](fg:surface2 bg:surface1)\
+$nodejs\
+$php\
+$python\
+$docker_context\
+[](fg:surface1 bg:surface0)\
+$time\
+[ ](fg:surface0)\
+$line_break$character"""
+
+palette = 'catppuccin_mocha'
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+orange = "#fab387"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+
+# --- Identidade ---
+[os]
+disabled = false
+style = "fg:text bg:surface0"
+format = "[ $symbol ]($style)"
+
+[os.symbols]
+Arch = "󰣇"
+
+[username]
+show_always = true
+style_user = "fg:sapphire bg:surface0 bold"
+format = "[ $user ]($style)"
+
+# --- Diretório ---
+[directory]
+style = "fg:text bg:surface1"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+# --- Git ---
+[git_branch]
+symbol = ""
+format = "[ $symbol $branch ](fg:lavender bg:surface2)"
+
+[git_status]
+# AJUSTE 1: Mudei fg:text para fg:maroon. 
+# Se tiver alteração pendente, fica avermelhado para avisar.
+format = "[ $all_status$ahead_behind ](fg:maroon bg:surface2)"
+
+# --- Ferramentas ---
+# AJUSTE 2: Versões entre parênteses para organizar
+[nodejs]
+symbol = ""
+format = "[ $symbol ($version) ](fg:green bg:surface1)"
+
+[php]
+symbol = ""
+format = "[ $symbol ($version) ](fg:blue bg:surface1)"
+
+[python]
+symbol = ""
+format = "[ $symbol ($version) ](fg:yellow bg:surface1)"
+
+[docker_context]
+symbol = ""
+format = "[ $symbol $context ](fg:teal bg:surface1)"
+
+# --- Tempo ---
+[time]
+disabled = false
+time_format = "%H:%M"
+format = "[  $time ](fg:subtext0 bg:surface0)"
+
+# --- Prompt ---
+[line_break]
+disabled = false
+
+[character]
+# AJUSTE 3: Seta fina para combinar com a delicadeza da Waybar
+success_symbol = '[](bold green)'
+error_symbol = '[](bold red)'
