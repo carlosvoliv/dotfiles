@@ -1,0 +1,22 @@
+# Fonte
+font-family = JetBrainsMono Nerd Font
+font-size = 12
+
+# Tema Catppuccin Mocha (cores equivalentes ao seu current-theme.conf)
+theme = catppuccin-mocha
+
+# Transparência
+background-opacity = 0.85
+
+# Cursor
+cursor-style = bar
+
+# Padding
+window-padding-x = 6
+window-padding-y = 6
+
+# Shell
+shell-integration = fish
+
+# Comportamento
+confirm-close-surface = false
