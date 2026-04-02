@@ -1,0 +1,119 @@
+/* --- JANELA (Fundo) --- */
+window {
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 12pt;
+  background-color: rgba(30, 30, 46, 0.35);
+}
+
+/* --- A CAIXA (Container Central) --- */
+grid {
+  background-color: rgba(30, 30, 46, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  margin-top: 200px;
+  margin-bottom: 400px;
+}
+
+/* --- BOTÕES --- */
+button {
+  background-color: transparent;
+  color: #a6adc8;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  min-width: 120px;
+  min-height: 120px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-position: center 35px;
+  background-size: 54px 54px;
+  padding-top: 70px;
+  font-weight: 400;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+/* --- ESTADOS (Hover & Focus) --- */
+button:hover,
+button:focus {
+  background-color: rgba(116, 199, 236, 0.12);
+  background-size: 70px 70px;
+  border: 1px solid rgba(116, 199, 236, 0.4);
+  color: #74c7ec;
+  font-weight: 600;
+  font-size: 15px;
+  outline-style: none;
+}
+
+/* --- CORES SUTIS POR AÇÃO --- */
+#lock:hover,
+#lock:focus {
+  border-color: #cba6f7;
+  color: #cba6f7;
+  background-image: url("/home/kadu/.config/wlogout/icons/lock-hover.png");
+  background-color: rgba(203, 166, 247, 0.1);
+}
+
+#suspend:hover,
+#suspend:focus {
+  border-color: rgba(166, 227, 161, 0.5);
+  color: #a6e3a1;
+  background-image: url("/home/kadu/.config/wlogout/icons/suspend-hover.png");
+  background-color: rgba(166, 227, 161, 0.08);
+}
+
+#hibernate:hover,
+#hibernate:focus {
+  border-color: rgba(249, 226, 175, 0.5);
+  color: #f9e2af;
+  background-image: url("/home/kadu/.config/wlogout/icons/hibernate-hover.png");
+  background-color: rgba(249, 226, 175, 0.08);
+}
+
+#logout:hover,
+#logout:focus {
+  border-color: rgba(116, 199, 236, 0.5);
+  color: #74c7ec;
+  background-image: url("/home/kadu/.config/wlogout/icons/logout-hover.png");
+  background-color: rgba(116, 199, 236, 0.08);
+}
+
+#reboot:hover,
+#reboot:focus {
+  border-color: rgba(250, 179, 135, 0.5);
+  color: #fab387;
+  background-image: url("/home/kadu/.config/wlogout/icons/reboot-hover.png");
+  background-color: rgba(250, 179, 135, 0.08);
+}
+
+#shutdown:hover,
+#shutdown:focus {
+  border-color: rgba(243, 139, 168, 0.5);
+  color: #f38ba8;
+  background-image: url("/home/kadu/.config/wlogout/icons/shutdown-hover.png");
+  background-color: rgba(243, 139, 168, 0.08);
+}
+
+/* --- ÍCONES --- */
+#lock {
+  background-image: url("/home/kadu/.config/wlogout/icons/lock.png");
+}
+
+#logout {
+  background-image: url("/home/kadu/.config/wlogout/icons/logout.png");
+}
+
+#suspend {
+  background-image: url("/home/kadu/.config/wlogout/icons/suspend.png");
+}
+
+#hibernate {
+  background-image: url("/home/kadu/.config/wlogout/icons/hibernate.png");
+}
+
+#shutdown {
+  background-image: url("/home/kadu/.config/wlogout/icons/shutdown.png");
+}
+
+#reboot {
+  background-image: url("/home/kadu/.config/wlogout/icons/reboot.png");
+}

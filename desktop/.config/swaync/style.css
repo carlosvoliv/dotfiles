@@ -1,0 +1,185 @@
+/* --- GERAL --- */
+* {
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+/* PAINEL PRINCIPAL */
+.control-center {
+  background: rgba(30, 30, 46, 0.7);
+  border-radius: 14px;
+  border: 2px solid rgba(116, 199, 236, 0.3);
+  padding: 12px;
+}
+
+/* --- GRID DE BOTÕES (QUICK SETTINGS) --- */
+.widget-buttons-grid {
+  padding: 0;
+  margin-bottom: 8px;
+  background: transparent;
+  border-radius: 0;
+}
+
+.widget-buttons-grid>flowbox {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button {
+  background: rgba(30, 30, 46, 0.4);
+  border-radius: 10px;
+  margin: 3px;
+  min-width: 75px;
+  min-height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #cdd6f4;
+  font-size: 18px;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button label {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:hover {
+  background: rgba(116, 199, 236, 0.2);
+  border: 1px solid #74c7ec;
+  color: #74c7ec;
+}
+
+/* --- WIDGETS (Pílulas) --- */
+.widget-dnd,
+.widget-mpris,
+.widget-volume,
+.widget-backlight {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 14px;
+  margin-bottom: 8px;
+  color: #cdd6f4;
+}
+
+/* Sliders */
+.widget-volume,
+.widget-backlight {
+  font-size: 16px;
+  padding: 10px 12px;
+}
+
+.widget-volume scale trough,
+.widget-backlight scale trough {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  min-height: 6px;
+  margin-left: 8px;
+}
+
+.widget-volume scale highlight,
+.widget-backlight scale highlight {
+  background: #74c7ec;
+  border-radius: 8px;
+  min-height: 6px;
+}
+
+.widget-volume scale slider,
+.widget-backlight scale slider {
+  background: transparent;
+  min-width: 0;
+  min-height: 0;
+  box-shadow: none;
+}
+
+/* --- TÍTULO E BOTÃO LIMPAR --- */
+.widget-title {
+  color: #cdd6f4;
+  margin: 5px 0;
+  padding: 0 5px;
+}
+
+.widget-title button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: #a6adc8;
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  font-weight: 600;
+}
+
+.widget-title button:hover {
+  background: #f38ba8;
+  border: 1px solid #f38ba8;
+  color: #1e1e2e;
+}
+
+/* --- NOTIFICAÇÕES --- */
+.notification-row {
+  outline: none;
+  margin: 5px 0;
+  padding: 0;
+}
+
+.notification-row:focus,
+.notification-row:selected {
+  background: transparent;
+}
+
+.notification {
+  background: rgba(30, 30, 46, 0.7);
+  border-radius: 12px;
+  padding: 8px;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+.notification-row:focus .notification,
+.notification-row:selected .notification {
+  background: rgba(116, 199, 236, 0.15);
+  border: 1px solid rgba(116, 199, 236, 0.5);
+}
+
+/* Limpeza Interna */
+.notification-content,
+.notification-content box,
+.notification-content image,
+.notification-content label {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Botões de Ação */
+.notification-action-button {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 4px 10px;
+  margin-top: 5px;
+  color: #cdd6f4;
+}
+
+.notification-action-button:hover {
+  background: #74c7ec;
+  color: #1e1e2e;
+}
+
+/* Textos */
+.summary {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.body {
+  color: #bac2de;
+}
+
+.time {
+  color: #a6adc8;
+  font-size: 0.75rem;
+  margin-right: 10px;
+}
