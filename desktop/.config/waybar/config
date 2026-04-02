@@ -1,0 +1,117 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    "spacing": 0,
+    "modules-left": [
+        "custom/arch",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "hyprland/workspaces",
+        "hyprland/submap"
+    ],
+    "modules-right": [
+        "tray",
+        "group/controls",
+        "custom/search",
+        "custom/clock", // Data e hora corrigidas aqui
+        "custom/notification"
+    ],
+
+    "custom/arch": {
+        "format": "  ",
+        "on-click": "wlogout -b 6 -C /home/kadu/.config/wlogout/style.css -l /home/kadu/.config/wlogout/layout",
+        "tooltip": false
+    },
+
+    "hyprland/window": {
+        "format": " {}",
+        "max-length": 50,
+        "separate-outputs": true
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "sort-by-number": true,
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": ""
+        }
+    },
+
+    "group/controls": {
+        "orientation": "horizontal",
+        "modules": [
+            "network",
+            "pulseaudio"
+        ]
+    },
+
+    "network": { 
+        "format-wifi": "{icon}", 
+        "format-ethernet": "󰣺",
+        "format-disconnected": "󰤮", 
+        "tooltip-format": "{essid} - {signalStrength}%", 
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"], 
+        "on-click": "~/.config/waybar/scripts/wifi-menu.sh"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "󰝟",
+        "tooltip-format": "{volume}%",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "custom/search": {
+        "format": "  ",
+        "on-click": "wofi --show drun",
+        "tooltip": false
+    },
+
+    "custom/clock": {
+    "exec": "~/.config/waybar/scripts/date-pt.sh",
+    "interval": 60,
+    "format": "{}",  // <-- AQUI está o format
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/smart_calendar.sh"
+    },
+
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": " ", // (Opcional) Sino com pontinho vermelho
+            "none": " ", // Sino normal
+            "dnd-notification": " ", // Não perturbe + notif
+            "dnd-none": " ", // Não perturbe vazio
+            "inhibited-notification": " ",
+            "inhibited-none": " ",
+            "dnd-inhibited-notification": " ",
+            "dnd-inhibited-none": " "
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+    "hyprland/submap": {
+        "format": "", 
+        "max-length": 8,
+        "tooltip": false
+    },
+}
